@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -23,14 +24,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.google.common.io.Files;
 
 public class Base {
-	public WebDriver driver;
-	public Properties props;
-	public WebDriverWait wait;
+	protected RemoteWebDriver driver =null;
+	protected static WebDriverWait wait = null;
+	protected Properties properties = null;
 
 	public Base() {
-		props = new Properties();
+		properties = new Properties();
 		try {
-			props.load(new FileInputStream("Vivalocators.properties"));
+			properties.load(new FileInputStream("Vivalocators.properties"));
 		} catch (
 
 		FileNotFoundException e) {
@@ -55,8 +56,8 @@ public class Base {
 	}
 
 	public String Screenshot(String name) throws IOException {
-		TakesScreenshot ss = ((TakesScreenshot) driver);
-		File source = ss.getScreenshotAs(OutputType.FILE);
+		
+		File source = driver.getScreenshotAs(OutputType.FILE);
 
 		File Destination = new File("C:\\Users\\dbegum01\\OneDrive - dentsu\\Pictures\\Automation\\" + name + ".png");
 		FileHandler.copy(source, Destination);
@@ -70,19 +71,9 @@ public class Base {
 		Exe.executeScript("arguments[0].scrollIntoView(true);", Scrollelement);
 
 	}
-
 	public void iwait() {
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	}
 
-	public void login() {
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("https://app.vgqa.glint.cloud-dev.microsoft/session/auth");
-		iwait();
-		iwait();
-		driver.findElement(By.id("LoginPage.email.id")).sendKeys("qatester@glintinc.com");
-//driver.findElement(By.xpath	  
-	}
 
 }
