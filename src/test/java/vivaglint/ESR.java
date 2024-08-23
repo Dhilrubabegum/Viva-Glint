@@ -43,4 +43,9 @@ public class ESR extends Vivalogin {
 		esr.Addsection();
 		esr.Screenshot("Tc_04");
 	}
+	@Test
+	public void Tc_05() throws IOException, InterruptedException {
+		esr.Exportandshare();
+		esr.Screenshot("Tc_05");
+	}
 }

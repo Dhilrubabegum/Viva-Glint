@@ -1,6 +1,8 @@
 package glint;
 
+import java.util.Iterator;
 import java.util.Properties;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -64,4 +66,53 @@ public class Executivesummaryreport extends Base {
 		scrollintoElement(driver.findElement(By.xpath(properties.getProperty("addsectionheader.xpath"))));
 		
 	}
+	public void Exportandshare() throws InterruptedException {
+		changesurvey();
+		driver.findElement(By.xpath(properties.getProperty("Reportexportdropdown.xpath"))).click();
+		iwait();
+		String ppt = driver.findElement(By.id(properties.getProperty("Exporttoppt.id"))).getText();
+		iwait();
+		Assert.assertEquals(ppt, "Export Report to PowerPoint");
+		String pdf = driver.findElement(By.id(properties.getProperty("Exporttopdf.id"))).getText();
+		Assert.assertEquals(pdf, "Export Report to PDF");
+		String newpdf = driver.findElement(By.id(properties.getProperty("newExporttopdf.id"))).getText();
+		Assert.assertEquals(newpdf, "(New) Export Report to PDF");
+		String Img = driver.findElement(By.id(properties.getProperty("Exportstoimage.id"))).getText();
+		Assert.assertEquals(Img, "Export Report to Images");
+		String csv = driver.findElement(By.id(properties.getProperty("Exporttocsv.id"))).getText();
+		Assert.assertEquals(csv, "Export Report to Spreadsheet");
+		iwait();
+		driver.findElement(By.id(properties.getProperty("Exporttoppt.id"))).click();
+		
+		String parent=driver.getWindowHandle();
+		 
+		Set<String>s=driver.getWindowHandles();
+		 
+		// Now iterate using Iterator
+		Iterator<String> I1= s.iterator();
+		 
+		while(I1.hasNext())
+		{
+		 
+		String child_window=I1.next();
+		 
+		 
+		if(!parent.equals(child_window))
+		{
+		driver.switchTo().window(child_window);
+		
+		System.out.println(driver.switchTo().window(child_window).getTitle());
+		 
+		driver.close();
+		}
+		 
+		}
+		
+		driver.switchTo().window(parent);
+		driver.findElement(By.id(properties.getProperty("Exporttopdf.id"))).click();
+	
+		
+	
+	}
 }
+

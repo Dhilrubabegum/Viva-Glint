@@ -72,7 +72,7 @@ public class Base {
 
 	}
 	public void iwait() {
-		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 	}
 
 

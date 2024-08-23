@@ -36,31 +36,28 @@ public class Vivalogin extends Base {
 //	public void generateReports() {
 //	  extentReport.flush();
 //	}
-	
+
 	@BeforeTest
 	public void setup() {
 		prop = new Properties();
 		try {
 			prop.load(new FileInputStream("Data.properties"));
-			}catch (FileNotFoundException e) {
-				e.printStackTrace();
-			}catch (IOException e) {
-				e.printStackTrace();
-				}
-		
-		
-	    driver = new ChromeDriver();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.get("https://app.vgqa.glint.cloud-dev.microsoft/session/auth");
 		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		}
-	
+	}
 
-	
-	@AfterTest
-	public void quit() {
-	  driver.quit();
-	  } 
+//	@AfterTest
+//	public void quit() {
+//		driver.quit();
+//	}
 
 }

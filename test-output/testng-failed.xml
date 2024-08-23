@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="vivaglint.Vivalogin">
+      <class name="vivaglint.ESR">
         <methods>
-          <include name="Login"/>
+          <include name="setup"/>
+          <include name="Tc_05"/>
+          <include name="setObject"/>
         </methods>
-      </class> <!-- vivaglint.Vivalogin -->
+      </class> <!-- vivaglint.ESR -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
