@@ -57,6 +57,7 @@ public class Executivesummaryreport extends Base {
 		Assert.assertEquals(sc, "Search Comments");
 
 	}
+
 	public void Addsection() throws InterruptedException {
 		Moreoption();
 		driver.findElement(By.id(properties.getProperty("Addsection.id"))).click();
@@ -64,8 +65,9 @@ public class Executivesummaryreport extends Base {
 		driver.findElement(By.xpath(properties.getProperty("pulseresultsection.xpath"))).click();
 		iwait();
 		scrollintoElement(driver.findElement(By.xpath(properties.getProperty("addsectionheader.xpath"))));
-		
+
 	}
+
 	public void Exportandshare() throws InterruptedException {
 		changesurvey();
 		driver.findElement(By.xpath(properties.getProperty("Reportexportdropdown.xpath"))).click();
@@ -83,36 +85,27 @@ public class Executivesummaryreport extends Base {
 		Assert.assertEquals(csv, "Export Report to Spreadsheet");
 		iwait();
 		driver.findElement(By.id(properties.getProperty("Exporttoppt.id"))).click();
-		
-		String parent=driver.getWindowHandle();
-		 
-		Set<String>s=driver.getWindowHandles();
-		 
-		// Now iterate using Iterator
-		Iterator<String> I1= s.iterator();
-		 
-		while(I1.hasNext())
-		{
-		 
-		String child_window=I1.next();
-		 
-		 
-		if(!parent.equals(child_window))
-		{
-		driver.switchTo().window(child_window);
-		
-		System.out.println(driver.switchTo().window(child_window).getTitle());
-		 
-		driver.close();
+
+		String parent = driver.getWindowHandle();
+
+		Set<String> s = driver.getWindowHandles();
+		Iterator<String> I1 = s.iterator();
+
+		while (I1.hasNext()) {
+
+			String child_window = I1.next();
+
+			if (!parent.equals(child_window)) {
+				driver.switchTo().window(child_window);
+
+				System.out.println(driver.switchTo().window(child_window).getTitle());
+
+				driver.close();
+			}
+			
 		}
-		 
-		}
-		
 		driver.switchTo().window(parent);
 		driver.findElement(By.id(properties.getProperty("Exporttopdf.id"))).click();
-	
-		
-	
+
 	}
 }
-
