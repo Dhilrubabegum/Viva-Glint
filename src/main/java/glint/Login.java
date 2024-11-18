@@ -1,9 +1,15 @@
 package glint;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.remote.RemoteWebDriver;
+import java.time.Duration;
 
-public class Login extends Base {
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Login<WebDriver> extends Base {
 	public Login(RemoteWebDriver driver){
 		this.driver = driver;
 		}
@@ -17,9 +23,9 @@ public class Login extends Base {
         
         type(driver.findElement(By.id(properties.getProperty("LoginPage.password.id"))),password);
 		driver.findElement(By.xpath(properties.getProperty("LoginPage.submit.xpath"))).click();
-		iwait();
-		iwait();
-		driver.findElement(By.id(properties.getProperty("Report.id"))).click();
+//		Wait<org.openqa.selenium.WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+//	     WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("Report.xpath")));
+		driver.findElement(By.xpath(properties.getProperty("Report.xpath"))).click();
 		}
 	
 	public void survey(String survey) {
@@ -31,6 +37,8 @@ public class Login extends Base {
 	public void survey1(String survey1) {
 		type(driver.findElement(By.xpath(properties.getProperty("search.xpath"))),survey1);
         driver.findElement(By.xpath(properties.getProperty("survey1.xpath"))).click();
-		driver.findElement(By.xpath(properties.getProperty("ESR.xpath"))).click();
+        iwait();
+        iwait();
+        driver.findElement(By.xpath(properties.getProperty("ESR.xpath"))).click();
 	}
 }

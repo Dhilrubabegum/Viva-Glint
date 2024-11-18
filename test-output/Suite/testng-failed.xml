@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="vivaglint.ESR">
+        <methods>
+          <include name="Tc_10"/>
+          <include name="Tc_13"/>
+          <include name="setup"/>
+          <include name="Tc_09"/>
+          <include name="Tc_05"/>
+          <include name="Tc_11"/>
+          <include name="setObject"/>
+          <include name="Tc_12"/>
+        </methods>
+      </class> <!-- vivaglint.ESR -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

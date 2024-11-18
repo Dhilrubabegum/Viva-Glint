@@ -1,43 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="5" passed="0" failed="1" skipped="0">
+<testng-results ignored="16" total="17" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-23T19:08:23 IST" name="Default suite" finished-at="2024-08-23T19:09:48 IST" duration-ms="84664">
+  <suite started-at="2024-11-18T17:16:34 IST" name="Default suite" finished-at="2024-11-18T17:17:43 IST" duration-ms="69649">
     <groups>
     </groups>
-    <test started-at="2024-08-23T19:08:23 IST" name="Default test" finished-at="2024-08-23T19:09:48 IST" duration-ms="84664">
+    <test started-at="2024-11-18T17:16:34 IST" name="Default test" finished-at="2024-11-18T17:17:43 IST" duration-ms="69649">
       <class name="vivaglint.ESR">
-        <test-method is-config="true" signature="setup()[pri:0, instance:vivaglint.ESR@306e95ec]" started-at="2024-08-23T19:08:23 IST" name="setup" finished-at="2024-08-23T19:08:30 IST" duration-ms="7320" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:vivaglint.ESR@1e1a0406]" started-at="2024-11-18T17:16:34 IST" name="setup" finished-at="2024-11-18T17:16:41 IST" duration-ms="7642" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setObject()[pri:0, instance:vivaglint.ESR@306e95ec]" started-at="2024-08-23T19:08:30 IST" name="setObject" finished-at="2024-08-23T19:09:02 IST" duration-ms="31832" status="PASS">
+        <test-method is-config="true" signature="ExtentReports()[pri:0, instance:vivaglint.ESR@1e1a0406]" started-at="2024-11-18T17:16:41 IST" name="ExtentReports" finished-at="2024-11-18T17:16:42 IST" duration-ms="358" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ExtentReports -->
+        <test-method is-config="true" signature="setObject()[pri:0, instance:vivaglint.ESR@1e1a0406]" started-at="2024-11-18T17:16:42 IST" name="setObject" finished-at="2024-11-18T17:16:58 IST" duration-ms="16755" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setObject -->
-        <test-method signature="Tc_05()[pri:0, instance:vivaglint.ESR@306e95ec]" started-at="2024-08-23T19:09:02 IST" name="Tc_05" finished-at="2024-08-23T19:09:48 IST" duration-ms="45459" status="FAIL">
+        <test-method signature="Tc_17()[pri:0, instance:vivaglint.ESR@1e1a0406]" started-at="2024-11-18T17:16:58 IST" name="Tc_17" finished-at="2024-11-18T17:17:43 IST" duration-ms="44569" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#option1"}
-  (Session info: chrome=127.0.6533.120)
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//select[@id='glintDropdown_a6cb6f0a-2a24-4a30-a694-bbf254b67f2a']"}
+  (Session info: chrome=131.0.6778.69)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9c8fdfb8bb1ae160d343644f7fee2d13, findElement {using=id, value=option1}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Users\dbegum01\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60990}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60990/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9c8fdfb8bb1ae160d343644f7fee2d13]]>
+Command: [da690fd7e66a73461843a83e010b45c2, findElement {using=xpath, value=//select[@id='glintDropdown_a6cb6f0a-2a24-4a30-a694-bbf254b67f2a']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.69, chrome: {chromedriverVersion: 131.0.6778.69 (77e2244bbcda..., userDataDir: C:\Users\dbegum01\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49228}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49228/devtoo..., se:cdpVersion: 131.0.6778.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: da690fd7e66a73461843a83e010b45c2]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#option1"}
-  (Session info: chrome=127.0.6533.120)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//select[@id='glintDropdown_a6cb6f0a-2a24-4a30-a694-bbf254b67f2a']"}
+  (Session info: chrome=131.0.6778.69)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9c8fdfb8bb1ae160d343644f7fee2d13, findElement {using=id, value=option1}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Users\dbegum01\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60990}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60990/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9c8fdfb8bb1ae160d343644f7fee2d13
+Command: [da690fd7e66a73461843a83e010b45c2, findElement {using=xpath, value=//select[@id='glintDropdown_a6cb6f0a-2a24-4a30-a694-bbf254b67f2a']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.69, chrome: {chromedriverVersion: 131.0.6778.69 (77e2244bbcda..., userDataDir: C:\Users\dbegum01\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49228}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49228/devtoo..., se:cdpVersion: 131.0.6778.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: da690fd7e66a73461843a83e010b45c2
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -54,8 +58,8 @@ at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(Elemen
 at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
-at glint.Executivesummaryreport.Exportandshare(Executivesummaryreport.java:112)
-at vivaglint.ESR.Tc_05(ESR.java:48)
+at glint.Executivesummaryreport.Manager(Executivesummaryreport.java:279)
+at vivaglint.ESR.Tc_17(ESR.java:127)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -89,7 +93,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Tc_05 -->
+        </test-method> <!-- Tc_17 -->
+        <test-method is-config="true" signature="generateReports()[pri:0, instance:vivaglint.ESR@1e1a0406]" started-at="2024-11-18T17:17:43 IST" name="generateReports" finished-at="2024-11-18T17:17:43 IST" duration-ms="271" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateReports -->
       </class> <!-- vivaglint.ESR -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
