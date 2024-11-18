@@ -107,7 +107,7 @@ public class ESR extends Vivalogin {
 	@Test
 	public void Tc_14() throws IOException, InterruptedException {
 		esr.Historysection();
-		esr.Screenshot("Tc_014");
+		esr.Screenshot("Tc_01");
 	}
 
 	@Test

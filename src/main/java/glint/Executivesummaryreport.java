@@ -299,12 +299,12 @@ public class Executivesummaryreport extends Base {
 		e.click();
 		e.getText();
 
-//		WebElement tooltip1 = driver.findElement(By.xpath(" //div[text()=\" Score 47  Company_updated 47  Pulsed on Nov 13 \"]"));
-//		Actions act = new Actions(driver);
-//		act.moveToElement(tooltip1).build().perform();
-//		act.moveToElement(tooltip1);
-//		String TT1 = tooltip1.getText();
-//		System.out.println(TT1);
+		WebElement tooltip1 = driver.findElement(By.xpath(" //div[text()=\" Score 47  Company_updated 47  Pulsed on Nov 13 \"]"));
+		Actions act = new Actions(driver);
+		act.moveToElement(tooltip1).build().perform();
+		act.moveToElement(tooltip1);
+		String TT1 = tooltip1.getText();
+		System.out.println(TT1);
 
 	}
 }
