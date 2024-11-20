@@ -13,6 +13,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import glint.Base;
@@ -22,22 +23,23 @@ public class Vivalogin extends Base {
 
 	ExtentSparkReporter spark;
 	ExtentReports extentReport;
-//	ExtentTest test ;
+	ExtentTest test ;
 
 	@BeforeClass
 	public void ExtentReports() {
 
 		spark = new ExtentSparkReporter("ExtentReport.html");
-		extentReport = new ExtentReports();
 
 		spark.config().setDocumentTitle("ESR Report");
 		spark.config().setReportName("ESR-overview");
 		spark.config().setTimeStampFormat("EEEE, MMMM dd, YYYY, hh:mm a '('zzz')'");
-		extentReport.attachReporter(spark);
+		 extentReport = new ExtentReports();
+			extentReport.attachReporter(spark);
+		
 	}
 
 	@AfterClass
-	public void generateReports() {
+	public void Reports() {
 		extentReport.flush();
 	}
 
