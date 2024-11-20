@@ -5,10 +5,10 @@
     <classes>
       <class name="vivaglint.ESR">
         <methods>
+          <include name="Reports"/>
           <include name="setup"/>
-          <include name="generateReports"/>
+          <include name="Tc_26"/>
           <include name="setObject"/>
-          <include name="Tc_17"/>
           <include name="ExtentReports"/>
         </methods>
       </class> <!-- vivaglint.ESR -->

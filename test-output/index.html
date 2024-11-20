@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\dbegum01\AppData\Local\Temp\testng-eclipse-1773301569\testng-customsuite.xml</span>
+                    <span>C:\Users\dbegum01\AppData\Local\Temp\testng-eclipse-185717379\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="vivaglint.ESR" class="method navigator-link" hash-for-method="Tc_17">Tc_17</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="vivaglint.ESR" class="method navigator-link" hash-for-method="Tc_26">Tc_26</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -127,18 +127,19 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Tc_17">
-                  </a> <!-- Tc_17 -->
-                  <span class="method-name">Tc_17</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//select[@id=&apos;glintDropdown_a6cb6f0a-2a24-4a30-a694-bbf254b67f2a&apos;]&quot;}
+                  <a name="Tc_26">
+                  </a> <!-- Tc_26 -->
+                  <span class="method-name">Tc_26</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
   (Session info: chrome=131.0.6778.69)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [da690fd7e66a73461843a83e010b45c2, findElement {using=xpath, value=//select[@id=&apos;glintDropdown_a6cb6f0a-2a24-4a30-a694-bbf254b67f2a&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.69, chrome: {chromedriverVersion: 131.0.6778.69 (77e2244bbcda..., userDataDir: C:\Users\dbegum01\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49228}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49228/devtoo..., se:cdpVersion: 131.0.6778.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: da690fd7e66a73461843a83e010b45c2
+Command: [3fc128696d3cc54b89efe08d907c8245, clickElement {id=f.4A333C37FA8E71F9029B8D5A8DAB4EEB.d.3F1328273C094D3DFEB4A9FC23594807.e.59}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.69, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\dbegum01\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50651}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50651/devtoo..., se:cdpVersion: 131.0.6778.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (3fc128696d3cc54b89efe08d907c8245)] -&gt; xpath: (//div[@class=&apos;vg-icon ng-star-inserted&apos;])[20]]
+Session ID: 3fc128696d3cc54b89efe08d907c8245
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -151,12 +152,10 @@ Session ID: da690fd7e66a73461843a83e010b45c2
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
-	at glint.Executivesummaryreport.Manager(Executivesummaryreport.java:279)
-	at vivaglint.ESR.Tc_17(ESR.java:127)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at glint.Executivesummaryreport.Removesection(Executivesummaryreport.java:412)
+	at vivaglint.ESR.Tc_26(ESR.java:182)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -194,7 +193,7 @@ Session ID: da690fd7e66a73461843a83e010b45c2
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\dbegum01\AppData\Local\Temp\testng-eclipse-1773301569\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\dbegum01\AppData\Local\Temp\testng-eclipse-185717379\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -205,7 +204,7 @@ Session ID: da690fd7e66a73461843a83e010b45c2
     &lt;classes&gt;
       &lt;class name=&quot;vivaglint.ESR&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;Tc_17&quot;/&gt;
+          &lt;include name=&quot;Tc_26&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- vivaglint.ESR --&gt;
     &lt;/classes&gt;
@@ -249,14 +248,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Tc_17')
+data.setCell(0, 1, 'Tc_26')
 data.setCell(0, 2, 'vivaglint.ESR')
-data.setCell(0, 3, 44569);
+data.setCell(0, 3, 513);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 44 seconds</span>
+              <span class="suite-total-time">Total running time: 513 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -271,7 +270,7 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">16 ignored methods</span>
+            <span class="header-content">25 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -279,9 +278,31 @@ return data;
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">Tc_10</span>
                 <br/>
+                <span class="ignored-method-name">Tc_13</span>
+                <br/>
+                <span class="ignored-method-name">Tc_19</span>
+                <br/>
+                <span class="ignored-method-name">Tc_15</span>
+                <br/>
+                <span class="ignored-method-name">Tc_18</span>
+                <br/>
+                <span class="ignored-method-name">Tc_16</span>
+                <br/>
+                <span class="ignored-method-name">Tc_11</span>
+                <br/>
+                <span class="ignored-method-name">Tc_14</span>
+                <br/>
+                <span class="ignored-method-name">Tc_17</span>
+                <br/>
+                <span class="ignored-method-name">Tc_12</span>
+                <br/>
+                <span class="ignored-method-name">Tc_21</span>
+                <br/>
                 <span class="ignored-method-name">Tc_02</span>
                 <br/>
-                <span class="ignored-method-name">Tc_13</span>
+                <span class="ignored-method-name">Tc_24</span>
+                <br/>
+                <span class="ignored-method-name">Tc_20</span>
                 <br/>
                 <span class="ignored-method-name">Tc_08</span>
                 <br/>
@@ -289,25 +310,21 @@ return data;
                 <br/>
                 <span class="ignored-method-name">Tc_04</span>
                 <br/>
-                <span class="ignored-method-name">Tc_15</span>
-                <br/>
                 <span class="ignored-method-name">Tc_07</span>
                 <br/>
                 <span class="ignored-method-name">Tc_05</span>
                 <br/>
-                <span class="ignored-method-name">Tc_16</span>
-                <br/>
-                <span class="ignored-method-name">Tc_11</span>
+                <span class="ignored-method-name">Tc_22</span>
                 <br/>
                 <span class="ignored-method-name">Tc_03</span>
                 <br/>
-                <span class="ignored-method-name">Tc_14</span>
+                <span class="ignored-method-name">Tc_25</span>
                 <br/>
                 <span class="ignored-method-name">Tc_06</span>
                 <br/>
                 <span class="ignored-method-name">Tc_01</span>
                 <br/>
-                <span class="ignored-method-name">Tc_12</span>
+                <span class="ignored-method-name">Tc_23</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -326,21 +343,21 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">ExtentReports</span>
-                <span class="method-start">7652 ms</span>
+                <span class="method-start">8975 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">setObject</span>
-                <span class="method-start">8010 ms</span>
+                <span class="method-start">9397 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">Tc_17</span>
-                <span class="method-start">24773 ms</span>
+                <span class="method-name">Tc_26</span>
+                <span class="method-start">31718 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
-                <span class="method-name">generateReports</span>
-                <span class="method-start">69347 ms</span>
+                <span class="method-name">Reports</span>
+                <span class="method-start">32237 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
