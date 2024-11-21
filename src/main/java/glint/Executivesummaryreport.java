@@ -16,6 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.model.Media;
 
 public class Executivesummaryreport extends Base {
 
@@ -27,15 +28,14 @@ public class Executivesummaryreport extends Base {
 	public String ESRTitle() {
 		WebElement title = driver.findElement(By.xpath(properties.getProperty("ESRTitle.xpath")));
 		String title1 = title.getText();
-		// System.out.println(title1);
 		Assert.assertEquals(title1, "Executive Summary Report");
-//		ExtentTest test = extentReport.createTest("ESR title");
-//		test.info("Title of the page");
 		return title1;
 
 	}
 
 	public void changesurvey() throws InterruptedException {
+		iwait();
+		Thread.sleep(5000);
 		driver.findElement(By.xpath(properties.getProperty("addfilter.xpath"))).click();
 		Thread.sleep(5000);
 		iwait();
@@ -71,6 +71,7 @@ public class Executivesummaryreport extends Base {
 
 	public void Addsection() throws InterruptedException {
 		Moreoption();
+		iwait();
 		driver.findElement(By.id(properties.getProperty("Addsection.id"))).click();
 		iwait();
 		driver.findElement(By.xpath(properties.getProperty("pulseresultsection.xpath"))).click();
@@ -80,7 +81,7 @@ public class Executivesummaryreport extends Base {
 	}
 
 	public void ExportList() throws InterruptedException {
-		changesurvey();
+		// changesurvey();
 		driver.findElement(By.xpath(properties.getProperty("Reportexportdropdown.xpath"))).click();
 		iwait();
 		iwait();
@@ -94,18 +95,9 @@ public class Executivesummaryreport extends Base {
 	}
 
 	public void Exportppt() throws InterruptedException {
-		changesurvey();
+		// changesurvey();
 		driver.findElement(By.xpath(properties.getProperty("Reportexportdropdown.xpath"))).click();
 		iwait();
-//		String ppt = driver.findElement(By.id(properties.getProperty("Exporttoppt.id"))).getText();
-//		iwait();
-//		Assert.assertEquals(ppt, "Export Report to PowerPoint");
-//		String pdf = driver.findElement(By.id(properties.getProperty("Exporttopdf.id"))).getText();
-//		Assert.assertEquals(pdf, "Export Report to PDF");
-//		String Img = driver.findElement(By.id(properties.getProperty("Exportstoimage.id"))).getText();
-//		Assert.assertEquals(Img, "Export Report to Images");
-//		String csv = driver.findElement(By.id(properties.getProperty("Exporttocsv.id"))).getText();
-//		Assert.assertEquals(csv, "Export Report to Spreadsheet");
 		iwait();
 		driver.findElement(By.id(properties.getProperty("Exporttoppt.id"))).click();
 		iwait();
@@ -132,7 +124,7 @@ public class Executivesummaryreport extends Base {
 	}
 
 	public void Exportpdf() throws InterruptedException {
-		changesurvey();
+		// changesurvey();
 		driver.findElement(By.xpath(properties.getProperty("Reportexportdropdown.xpath"))).click();
 		iwait();
 		iwait();
@@ -160,7 +152,7 @@ public class Executivesummaryreport extends Base {
 	}
 
 	public void Exportimages() throws InterruptedException {
-		changesurvey();
+		// changesurvey();
 		driver.findElement(By.xpath(properties.getProperty("Reportexportdropdown.xpath"))).click();
 		iwait();
 		iwait();
@@ -188,13 +180,17 @@ public class Executivesummaryreport extends Base {
 	}
 
 	public void Exportcsv() throws InterruptedException {
-		changesurvey();
+		// changesurvey();
+		iwait();
 		driver.findElement(By.xpath(properties.getProperty("Reportexportdropdown.xpath"))).click();
 		iwait();
 		iwait();
 		driver.findElement(By.id(properties.getProperty("Exporttocsv.id"))).click();
 		iwait();
-
+		iwait();
+		iwait();
+		driver.findElement(By.xpath("//button[@class='btnCta glintButton']")).click();
+		iwait();
 		String parent = driver.getWindowHandle();
 
 		Set<String> s = driver.getWindowHandles();
@@ -217,7 +213,9 @@ public class Executivesummaryreport extends Base {
 	}
 
 	public void defaultSection() throws InterruptedException {
-		changesurvey();
+		// changesurvey();
+		iwait();
+		iwait();
 		List<WebElement> Sectionnames = driver
 				.findElements(By.xpath(properties.getProperty("defaultsectiontex.xpath")));
 		int countofsection = Sectionnames.size();
@@ -229,7 +227,7 @@ public class Executivesummaryreport extends Base {
 	}
 
 	public void surveyoverview() throws InterruptedException {
-		changesurvey();
+		// changesurvey();
 		List<WebElement> Sectionnames = driver.findElements(By.xpath(properties.getProperty("surveyoveview.xpath")));
 		int countofsection = Sectionnames.size();
 		System.out.println(countofsection);
@@ -240,7 +238,7 @@ public class Executivesummaryreport extends Base {
 	}
 
 	public void Historysection() throws InterruptedException {
-		changesurvey();
+		// changesurvey();
 		List<WebElement> Sectionnames = driver.findElements(By.xpath(properties.getProperty("historysection.xpath")));
 		int countofsection = Sectionnames.size();
 		System.out.println(countofsection);
@@ -252,7 +250,7 @@ public class Executivesummaryreport extends Base {
 	}
 
 	public void scores() throws InterruptedException {
-		changesurvey();
+		// changesurvey();
 		List<WebElement> Sectionnames = driver.findElements(By.xpath(properties.getProperty("scores.xpath")));
 		int countofsection = Sectionnames.size();
 		System.out.println(countofsection);
@@ -264,8 +262,7 @@ public class Executivesummaryreport extends Base {
 	}
 
 	public void Question() throws InterruptedException {
-		changesurvey();
-		List<WebElement> Sectionnames = driver.findElements(By.xpath(properties.getProperty("Questionsection.xpath")));
+		List<WebElement> Sectionnames = driver.findElements(By.xpath("(//p[@class='vg-layout-header-title'])[3]"));
 		int countofsection = Sectionnames.size();
 		System.out.println(countofsection);
 		for (WebElement ele : Sectionnames) {
@@ -276,48 +273,24 @@ public class Executivesummaryreport extends Base {
 	}
 
 	public void Manager() throws InterruptedException {
-		changesurvey();
+		// changesurvey();
 		iwait();
-		WebElement e = driver
-				.findElement(By.xpath("//select[@id='glintDropdown_a6cb6f0a-2a24-4a30-a694-bbf254b67f2a']"));
-		e.click();
-		// System.out.println(e);
-		iwait();
-		iwait();
-		// scrollintoElement(driver.findElement(By.xpath("//button[@class='disabled
-		// commentCountBtn']")));
-//		iwait();
-//		iwait();
-//		Select dropdown = new Select(
-//				driver.findElement(By.xpath("//select[@id='glintDropdown_a6cb6f0a-2a24-4a30-a694-bbf254b67f2a']")));
-//		dropdown.selectByVisibleText("attribute 19");
+		List<WebElement> e = driver.findElements(By.xpath("(//select[@class='ng-star-inserted'])[13]"));
 
-	}
-
-	public void Historyhoverover() throws InterruptedException {
-		changesurvey();
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		WebElement Element = driver.findElement(By.xpath(" //p[text()=\"History\"]"));
-		js.executeScript("arguments[0].scrollIntoView();", Element);
-		WebElement e = driver.findElement(By.xpath("//*[@aria-label='Score 50 Company_updated 50 Pulsed on Nov 13']"));
-		e.click();
-		e.getText();
-
-		WebElement tooltip1 = driver
-				.findElement(By.xpath(" //div[text()=\" Score 47  Company_updated 47  Pulsed on Nov 13 \"]"));
-		Actions act = new Actions(driver);
-		act.moveToElement(tooltip1).build().perform();
-		act.moveToElement(tooltip1);
-		String TT1 = tooltip1.getText();
-		System.out.println(TT1);
+		System.out.println(e.size());
+		for (WebElement webElement : e) {
+			String name = webElement.getText();
+			System.out.println(name);
+		}
 
 	}
 
 	public void addsection2() {
+		iwait();
 		WebElement as = driver.findElement(By.xpath("//button[@data-id='addSectionButton']"));
 		as.getText();
 		System.out.println(as);
-		// Assert.assertEquals(as, "Add section");
+
 	}
 
 	public void grouped() {
@@ -329,6 +302,7 @@ public class Executivesummaryreport extends Base {
 	}
 
 	public void ungrouped() {
+		iwait();
 		WebElement g = driver.findElement(By.xpath("(//input[@class='ng-untouched ng-pristine ng-valid'])[2]"));
 		iwait();
 		g.isSelected();
@@ -353,7 +327,7 @@ public class Executivesummaryreport extends Base {
 		Assert.assertEquals(false, false);
 	}
 
-	public void SaveReport() {
+	public void SaveReport() throws InterruptedException {
 		iwait();
 		driver.findElement(By.xpath(properties.getProperty("Reportexportdropdown.xpath"))).click();
 		iwait();
@@ -367,12 +341,20 @@ public class Executivesummaryreport extends Base {
 		name.sendKeys("Executive Summary Report Automation Copy");
 		iwait();
 		driver.findElement(By.xpath("//button[@class=\"btnCta glintButton\"]")).click();
+		iwait();
+		Thread.sleep(2000);
 		WebElement savedcopy = driver.findElement(By.xpath(" //h1[@class='reportTitle']"));
 		String name1 = savedcopy.getText();
+		iwait();
 		Assert.assertEquals(name1, "Executive Summary Report Automation Copy");
+		iwait();
+		driver.findElement(By.xpath(properties.getProperty("Report.xpath"))).click();
+
+		driver.findElement(By.xpath(properties.getProperty("ESR.xpath"))).click();
 	}
 
 	public void filterthereport() throws InterruptedException {
+		iwait();
 		driver.findElement(By.xpath(properties.getProperty("addfilter.xpath"))).click();
 		Thread.sleep(3000);
 		iwait();
@@ -391,33 +373,33 @@ public class Executivesummaryreport extends Base {
 	}
 
 	public void Repondentscount() {
+		iwait();
 		WebElement Rcount = driver.findElement(By.xpath("(//*[text()= \" 377 \"])[1]"));
 		String c = Rcount.getText();
 		Assert.assertEquals(c, "377");
 	}
 
 	public void Benchmark() {
-		WebElement b = driver.findElement(By.xpath("//div[@class='benchmarkDisplayContainer ng-star-inserted']"));
+		iwait();
+		WebElement b = driver.findElement(By.xpath("//span[text()=\"Benchmark:\"]"));
 		String s = b.getText();
 		Assert.assertEquals(s, "Benchmark:");
-		WebElement name = driver.findElement(By.xpath("//button[text()=\" Company_updated \"]"));
-		String n = b.getText();
-		System.out.println(n);
-	
-		
+
 	}
-	public void Removesection() {
+
+	public void Removesection() throws InterruptedException {
 		iwait();
+		driver.findElement(By.xpath(properties.getProperty("Reportexportdropdown.xpath"))).click();
 		iwait();
-		driver.findElement(By.xpath("(//div[@class='vg-icon ng-star-inserted'])[20]")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//div[@aria-label='Scoresmenu']")).click();
 		iwait();
-		driver.findElement(By.xpath("//option[text()=\"Remove\"]")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//li[@aria-label='Remove']")).click();
 		iwait();
-		WebElement e=driver.findElement(By.xpath(properties.getProperty("scores.xpath")));
-		String s=e.getText();
-		Assert.assertEquals(s, false);
-//		Select dropdown = new Select(
-//				driver.findElement(By.xpath("(//div[@class='menuButton overflow glintButton'])[1]")));
-//		dropdown.selectByVisibleText("Remove");
+		WebElement e = driver.findElement(By.xpath("//p[text()=\"Questions\"]"));
+		String s = e.getText();
+		Assert.assertEquals(s, "Questions");
 	}
+
 }

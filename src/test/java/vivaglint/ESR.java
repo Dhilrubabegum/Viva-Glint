@@ -26,7 +26,7 @@ public class ESR extends Vivalogin {
 		login.survey(prop.getProperty("survey"));
 	}
 
-	@Test
+	@Test(priority = 1)
 	public void Tc_01() throws IOException {
 
 		ExtentTest test = extentReport.createTest("Tc_01");
@@ -36,151 +36,221 @@ public class ESR extends Vivalogin {
 		test.addScreenCaptureFromPath(Screenshot("Tc_01"));
 	}
 
-	@Test
-	public void Tc_02() throws IOException, InterruptedException {
+	@Test(priority = 8)
+	void Tc_02() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_02");
+		test.log(Status.PASS, "user can able to change survey");
 		esr.changesurvey();
-		esr.Screenshot("Tc_02");
+		test.addScreenCaptureFromPath(Screenshot("Tc_02"));
 	}
 
-	@Test
+	@Test(priority = 19)
 	public void Tc_03() throws IOException, InterruptedException {
+		iwait();
+
+		ExtentTest test = extentReport.createTest("Tc_03");
+		test.log(Status.PASS, "More option is visible");
 		esr.Moreoption();
-		esr.Screenshot("Tc_03");
-		
+		test.addScreenCaptureFromPath(Screenshot("Tc_03"));
+
 	}
 
-	@Test
+	@Test(priority = 20)
 	public void Tc_04() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_04");
+		test.log(Status.PASS, "Section is added");
 		esr.Addsection();
-		esr.Screenshot("Tc_04");
+		test.addScreenCaptureFromPath(Screenshot("Tc_04"));
+
 	}
 
-	@Test
-	public void Tc_05() throws InterruptedException {
+	@Test(priority = 25)
+	public void Tc_05() throws InterruptedException, IOException {
+		ExtentTest test = extentReport.createTest("Tc_05");
+		test.log(Status.PASS, "List of Export and share is visible");
 		esr.ExportList();
+		test.addScreenCaptureFromPath(Screenshot("Tc_05"));
+
 	}
 
-	@Test
+	@Test(priority = 10)
 	public void Tc_06() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_06");
+		test.log(Status.PASS, "Exported to ppt");
 		esr.Exportppt();
-		esr.Screenshot("Tc_06");
+		test.addScreenCaptureFromPath(Screenshot("Tc_06"));
+
 	}
 
-	@Test
+	@Test(priority = 11)
 	public void Tc_07() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_07");
+		test.log(Status.PASS, "Exported to pdf");
 		esr.Exportpdf();
-		esr.Screenshot("Tc_07");
+		test.addScreenCaptureFromPath(Screenshot("Tc_07"));
+
 	}
 
-	@Test
+	@Test(priority = 12)
 	public void Tc_08() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_08");
+		test.log(Status.PASS, "Exported to Images");
 		esr.Exportimages();
-		esr.Screenshot("Tc_08");
+		test.addScreenCaptureFromPath(Screenshot("Tc_08"));
+
 	}
 
-	@Test
+	@Test(priority = 13)
 	public void Tc_09() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_09");
+		test.log(Status.PASS, "Exported to CSV");
 		esr.Exportcsv();
-		esr.Screenshot("Tc_09");
+		test.addScreenCaptureFromPath(Screenshot("Tc_09"));
+
 	}
 
-	@Test
+	@Test(priority = 9)
 	public void Tc_10() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_10");
+		test.log(Status.PASS, "Default section is displaying");
 		esr.defaultSection();
-		esr.Screenshot("Tc_010");
+		test.addScreenCaptureFromPath(Screenshot("Tc_10"));
 
 	}
 
-	@Test
+	@Test(priority = 14)
 	public void Tc_11() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_11");
+		test.log(Status.PASS, "Survey overview section is displaying");
 		esr.surveyoverview();
-		esr.Screenshot("Tc_011");
+		test.addScreenCaptureFromPath(Screenshot("Tc_11"));
+
 	}
 
-	@Test
+	@Test(priority = 15)
 	public void Tc_12() throws IOException, InterruptedException {
-		esr.Historyhoverover();
-		esr.Screenshot("Tc_012");
-	}
-
-	@Test
-	public void Tc_13() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_12");
+		test.log(Status.PASS, "History section is displaying");
 		esr.Historysection();
-		esr.Screenshot("Tc_013");
+		test.addScreenCaptureFromPath(Screenshot("Tc_12"));
+
 	}
 
-	@Test
-	public void Tc_14() throws IOException, InterruptedException {
+	@Test(priority = 16)
+	public void Tc_13() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_13");
+		test.log(Status.PASS, "Score section is displaying");
 		esr.scores();
-		esr.Screenshot("Tc_014");
+		test.addScreenCaptureFromPath(Screenshot("Tc_13"));
+
 	}
 
-	@Test
-	public void Tc_15() throws IOException, InterruptedException {
+	@Test(priority = 6)
+	public void Tc_14() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_14");
+		test.log(Status.PASS, "Question section is displaying");
 		esr.Question();
-		esr.Screenshot("Tc_015");
+		test.addScreenCaptureFromPath(Screenshot("Tc_14"));
+
 	}
 
-	@Test
-	public void Tc_16() throws IOException, InterruptedException {
+	@Test(priority = 18)
+	public void Tc_15() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_15");
+		test.log(Status.PASS, "Manager section is displaying");
 		esr.Manager();
-		esr.Screenshot("Tc_016");
+		test.addScreenCaptureFromPath(Screenshot("Tc_15"));
+
 	}
 
-	@Test
-	public void Tc_17() throws IOException, InterruptedException {
+	@Test(priority = 7)
+	public void Tc_16() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_16");
+		test.log(Status.PASS, "+Addsection in the bottom of the page is displaying");
 		esr.addsection2();
-		esr.Screenshot("Tc_017");
+		test.addScreenCaptureFromPath(Screenshot("Tc_16"));
+
 	}
 
-	@Test
-	public void Tc_18() throws IOException, InterruptedException {
+	@Test(priority = 3)
+	public void Tc_17() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_17");
+		test.log(Status.PASS, "Grouped checkbox for Scoresection is displaying");
 		esr.grouped();
-		esr.Screenshot("Tc_018");
+		test.addScreenCaptureFromPath(Screenshot("Tc_17"));
+
 	}
 
-	@Test
-	public void Tc_19() throws IOException, InterruptedException {
+	@Test(priority = 4)
+	public void Tc_18() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_18");
+		test.log(Status.PASS, "UnGrouped checkbox for Scoresection is displaying");
 		esr.ungrouped();
-		esr.Screenshot("Tc_019");
+		test.addScreenCaptureFromPath(Screenshot("Tc_18"));
+
 	}
 
-	@Test
-	public void Tc_20() throws IOException, InterruptedException {
+	@Test(priority = 5)
+	public void Tc_19() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_19");
+		test.log(Status.PASS, "Grouped checkbox for Managersection is displaying");
 		esr.managergrouped();
-		esr.Screenshot("Tc_020");
+		test.addScreenCaptureFromPath(Screenshot("Tc_18"));
+
 	}
 
-	@Test
-	public void Tc_21() throws IOException, InterruptedException {
+	@Test(priority = 6)
+	public void Tc_20() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_20");
+		test.log(Status.PASS, "UnGrouped checkbox for Managersection is displaying");
 		esr.managerungrouped();
-		esr.Screenshot("Tc_021");
+		test.addScreenCaptureFromPath(Screenshot("Tc_20"));
+
 	}
-	
-	@Test
-	public void Tc_22() throws IOException, InterruptedException {
+
+	@Test(priority = 22)
+	public void Tc_21() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_21");
+		test.log(Status.PASS, "Report is saved");
 		esr.SaveReport();
-		esr.Screenshot("Tc_022");
-}
-	@Test
-	public void Tc_23() throws IOException, InterruptedException {
+		test.addScreenCaptureFromPath(Screenshot("Tc_21"));
+
+	}
+
+	@Test(priority = 21)
+	public void Tc_22() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_22");
+		test.log(Status.PASS, "Filter is working");
 		esr.filterthereport();
-		esr.Screenshot("Tc_023");
-}
-	@Test
-	public void Tc_24() throws IOException, InterruptedException {
+		test.addScreenCaptureFromPath(Screenshot("Tc_22"));
+
+	}
+
+	@Test(priority = 2)
+	public void Tc_23() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_23");
+		test.log(Status.PASS, "Respondentscount is showing");
 		esr.Repondentscount();
-		esr.Screenshot("Tc_024");
-}
-	@Test
-	public void Tc_25() throws IOException, InterruptedException {
+		test.addScreenCaptureFromPath(Screenshot("Tc_23"));
+
+	}
+
+	@Test(priority = 23)
+	public void Tc_24() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_24");
+		test.log(Status.PASS, "Benchmark is showing");
 		esr.Benchmark();
-		esr.Screenshot("Tc_025");
-}
-	@Test
-	public void Tc_26() throws IOException, InterruptedException {
+		test.addScreenCaptureFromPath(Screenshot("Tc_24"));
+
+	}
+
+	@Test(priority = 25)
+	public void Tc_25() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_25");
+		test.log(Status.PASS, "User can able to Remove section");
 		esr.Removesection();
-		esr.Screenshot("Tc_026");
-}
+		test.addScreenCaptureFromPath(Screenshot("Tc_25"));
+
+	}
 
 }
