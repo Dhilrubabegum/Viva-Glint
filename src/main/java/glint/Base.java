@@ -25,7 +25,7 @@ import com.google.common.io.Files;
 
 public class Base {
 	protected RemoteWebDriver driver =null;
-	protected static WebDriverWait wait = null;
+	public static WebDriverWait wait = null;
 	protected Properties properties = null;
 
 	public Base() {
@@ -49,10 +49,10 @@ public class Base {
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 
-	public void type(WebElement element, String data) {
+	public void type(WebElement element, String i) {
 		wait.until(ExpectedConditions.visibilityOf(element));
 		element.clear();
-		element.sendKeys(data);
+		element.sendKeys(i);
 	}
 
 	public String Screenshot(String name) throws IOException {
@@ -72,7 +72,7 @@ public class Base {
 
 	}
 	public void iwait() {
-		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	}
 
 

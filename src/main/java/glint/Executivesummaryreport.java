@@ -1,5 +1,12 @@
 package glint;
 
+import java.lang.reflect.Array;
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
@@ -402,4 +409,86 @@ public class Executivesummaryreport extends Base {
 		Assert.assertEquals(s, "Questions");
 	}
 
+	public void FilterList() throws InterruptedException {
+		iwait();
+		driver.findElement(By.xpath(properties.getProperty("addfilter.xpath"))).click();
+		Thread.sleep(3000);
+		iwait();
+		driver.findElement(By.xpath("//span[text()=\"Add Filters\"]")).click();
+		iwait();
+		List<WebElement> L = driver.findElements(By.xpath("//li[@class='item ng-star-inserted']//div"));
+
+		String[] Expected = { "Bank A.No", "Birth Date", "Birth Month", "Birth Year", "End Date", "Father's Name",
+				"Gender", "Govt ID No", "H3", "H4", "HireYear", "Job Role", "Location", "Location Hierarchy", "Manager",
+				"Marital Status", "Mother's Name", "Salary Bank Name", "Start Date", "Team Hierarchy", "attribute 100",
+				"attribute 19", "attribute 21", "attribute 22", "attribute 23", "attribute 24", "attribute 25",
+				"attribute 26", "attribute 27", "attribute 28", "attribute 29", "attribute 30", "attribute 31",
+				"attribute 32", "attribute 33", "attribute 34", "attribute 35", "attribute 36", "attribute 37",
+				"attribute 38", "attribute 39", "attribute 40", "attribute 41", "attribute 42", "attribute 43",
+				"attribute 44", "attribute 45", "attribute 46", "attribute 47", "attribute 48", "attribute 49",
+				"attribute 51", "attribute 52", "attribute 53", "attribute 54", "attribute 55", "attribute 56",
+				"attribute 57", "attribute 58", "attribute 59", "attribute 60", "attribute 61", "attribute 62",
+				"attribute 63", "attribute 64", "attribute 65", "attribute 66", "attribute 67", "attribute 68",
+				"attribute 69", "attribute 70", "attribute 71", "attribute 72", "attribute 73", "attribute 74",
+				"attribute 75", "attribute 76", "attribute 77", "attribute 78", "attribute 79", "attribute 80",
+				"attribute 81", "attribute 82", "attribute 83", "attribute 84", "attribute 85", "attribute 86",
+				"attribute 87", "attribute 88", "attribute 89", "attribute 90", "attribute 91", "attribute 92",
+				"attribute 93", "attribute 94", "attribute 95", "attribute 96", "attribute 97", "attribute 98",
+				"attribute 99" };
+
+		List list1 = new ArrayList(Arrays.asList(Expected));
+		list1.add(Expected);
+		int size = list1.size() - 1;
+		List list2 = new ArrayList();
+		for (WebElement exp1 : L) {
+			String a = exp1.getText();
+			list2.add(a);
+		}
+		int size1 = list2.size();
+		Assert.assertEquals(size, size1);
+	}
+
+	public void Settings() throws InterruptedException {
+		iwait();
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+		WebElement title = driver.findElement(By.xpath("//span[text()=\"Scores\"]"));
+
+		wait.until(ExpectedConditions.visibilityOf(title));
+
+		driver.findElement(By.xpath("//button[@data-id='reportSettingsButton']")).click();
+		iwait();
+		WebElement title1 = driver.findElement(By.xpath("//div[@id='slideyHeaderContent_SECTION_EDIT_SLIDEY']//h1"));
+		wait.until(ExpectedConditions.visibilityOfAllElements(title1));
+		String t = title1.getText();
+		Assert.assertEquals(t, "Report Settings");
+
+	}
+
+	public void Done() throws InterruptedException {
+		iwait();
+		Settings();
+		WebElement d = driver.findElement(By.xpath("//button[text()=\" Done \"]"));
+		Assert.assertFalse(d.isEnabled());
+	}
+
+	public void RSClose() throws InterruptedException {
+		iwait();
+		Settings();
+		driver.findElement(By.xpath("//button[@class='btnIcon slideyClose glintButton']")).click();
+		WebElement title = driver.findElement(By.xpath(properties.getProperty("ESRTitle.xpath")));
+		String title1 = title.getText();
+		Assert.assertEquals(title1, "Executive Summary Report");
+	}
+
+	public void BenchmarkSelection() throws InterruptedException {
+		Settings();
+		driver.findElement(By.xpath("//label[text()=' Global 2020 (December) ']")).click();
+		WebElement d = driver.findElement(By.xpath("//button[text()=\" Done \"]"));
+		Assert.assertTrue(d.isEnabled());
+		driver.findElement(By.xpath("//button[text()=\" Done \"]")).click();
+		WebElement name = driver.findElement(By.xpath("//button[text()=' Global 2020 (December) ']"));
+		String s = name.getText();
+		Assert.assertEquals(s, "Global 2020 (December)");
+
+	}
 }

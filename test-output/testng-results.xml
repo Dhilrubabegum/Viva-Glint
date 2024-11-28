@@ -1,174 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="25" passed="24" failed="1" skipped="0">
+<testng-results ignored="29" total="30" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-21T17:08:31 IST" name="Suite" finished-at="2024-11-21T17:11:43 IST" duration-ms="191389">
+  <suite started-at="2024-11-28T18:16:27 IST" name="Default suite" finished-at="2024-11-28T18:17:00 IST" duration-ms="33358">
     <groups>
     </groups>
-    <test started-at="2024-11-21T17:08:31 IST" name="Test" finished-at="2024-11-21T17:11:43 IST" duration-ms="191389">
+    <test started-at="2024-11-28T18:16:27 IST" name="Default test" finished-at="2024-11-28T18:17:00 IST" duration-ms="33358">
       <class name="vivaglint.ESR">
-        <test-method is-config="true" signature="setup()[pri:0, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:08:31 IST" name="setup" finished-at="2024-11-21T17:08:38 IST" duration-ms="6731" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:vivaglint.ESR@27f981c6]" started-at="2024-11-28T18:16:27 IST" name="setup" finished-at="2024-11-28T18:16:34 IST" duration-ms="6771" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="ExtentReports()[pri:0, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:08:38 IST" name="ExtentReports" finished-at="2024-11-21T17:08:38 IST" duration-ms="238" status="PASS">
+        <test-method is-config="true" signature="onStart(org.testng.ITestContext)[pri:0, instance:vivaglint.ESR@27f981c6]" started-at="2024-11-28T18:16:34 IST" name="onStart" finished-at="2024-11-28T18:16:34 IST" duration-ms="421" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3a230001]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ExtentReports -->
-        <test-method is-config="true" signature="setObject()[pri:0, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:08:38 IST" name="setObject" finished-at="2024-11-21T17:08:58 IST" duration-ms="19357" status="PASS">
+        </test-method> <!-- onStart -->
+        <test-method is-config="true" signature="setObject()[pri:0, instance:vivaglint.ESR@27f981c6]" started-at="2024-11-28T18:16:34 IST" name="setObject" finished-at="2024-11-28T18:16:50 IST" duration-ms="16181" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setObject -->
-        <test-method signature="Tc_01()[pri:1, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:08:58 IST" name="Tc_01" finished-at="2024-11-21T17:08:59 IST" duration-ms="993" status="PASS">
+        <test-method signature="Tc_26()[pri:0, instance:vivaglint.ESR@27f981c6]" started-at="2024-11-28T18:16:50 IST" name="Tc_26" finished-at="2024-11-28T18:17:00 IST" duration-ms="9636" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Tc_01 -->
-        <test-method signature="Tc_23()[pri:2, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:08:59 IST" name="Tc_23" finished-at="2024-11-21T17:09:03 IST" duration-ms="4016" status="PASS">
+        </test-method> <!-- Tc_26 -->
+        <test-method is-config="true" signature="onFinish(org.testng.ITestContext)[pri:0, instance:vivaglint.ESR@27f981c6]" started-at="2024-11-28T18:17:00 IST" name="onFinish" finished-at="2024-11-28T18:17:00 IST" duration-ms="315" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3a230001]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Tc_23 -->
-        <test-method signature="Tc_17()[pri:3, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:09:03 IST" name="Tc_17" finished-at="2024-11-21T17:09:03 IST" duration-ms="152" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_17 -->
-        <test-method signature="Tc_18()[pri:4, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:09:03 IST" name="Tc_18" finished-at="2024-11-21T17:09:03 IST" duration-ms="169" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_18 -->
-        <test-method signature="Tc_19()[pri:5, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:09:03 IST" name="Tc_19" finished-at="2024-11-21T17:09:03 IST" duration-ms="146" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_19 -->
-        <test-method signature="Tc_14()[pri:6, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:09:03 IST" name="Tc_14" finished-at="2024-11-21T17:09:23 IST" duration-ms="20186" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_14 -->
-        <test-method signature="Tc_20()[pri:6, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:09:23 IST" name="Tc_20" finished-at="2024-11-21T17:09:24 IST" duration-ms="195" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_20 -->
-        <test-method signature="Tc_16()[pri:7, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:09:24 IST" name="Tc_16" finished-at="2024-11-21T17:09:24 IST" duration-ms="203" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_16 -->
-        <test-method signature="Tc_02()[pri:8, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:09:24 IST" name="Tc_02" finished-at="2024-11-21T17:09:51 IST" duration-ms="27180" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_02 -->
-        <test-method signature="Tc_10()[pri:9, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:09:51 IST" name="Tc_10" finished-at="2024-11-21T17:09:52 IST" duration-ms="765" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_10 -->
-        <test-method signature="Tc_06()[pri:10, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:09:52 IST" name="Tc_06" finished-at="2024-11-21T17:09:56 IST" duration-ms="3930" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_06 -->
-        <test-method signature="Tc_07()[pri:11, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:09:56 IST" name="Tc_07" finished-at="2024-11-21T17:09:58 IST" duration-ms="1836" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_07 -->
-        <test-method signature="Tc_08()[pri:12, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:09:58 IST" name="Tc_08" finished-at="2024-11-21T17:10:00 IST" duration-ms="2528" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_08 -->
-        <test-method signature="Tc_09()[pri:13, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:10:00 IST" name="Tc_09" finished-at="2024-11-21T17:10:04 IST" duration-ms="3465" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_09 -->
-        <test-method signature="Tc_11()[pri:14, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:10:04 IST" name="Tc_11" finished-at="2024-11-21T17:10:24 IST" duration-ms="20217" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_11 -->
-        <test-method signature="Tc_12()[pri:15, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:10:24 IST" name="Tc_12" finished-at="2024-11-21T17:10:24 IST" duration-ms="152" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_12 -->
-        <test-method signature="Tc_13()[pri:16, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:10:24 IST" name="Tc_13" finished-at="2024-11-21T17:10:24 IST" duration-ms="138" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_13 -->
-        <test-method signature="Tc_15()[pri:18, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:10:24 IST" name="Tc_15" finished-at="2024-11-21T17:10:24 IST" duration-ms="162" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_15 -->
-        <test-method signature="Tc_03()[pri:19, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:10:24 IST" name="Tc_03" finished-at="2024-11-21T17:10:51 IST" duration-ms="27035" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_03 -->
-        <test-method signature="Tc_04()[pri:20, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:10:51 IST" name="Tc_04" finished-at="2024-11-21T17:11:21 IST" duration-ms="29804" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_04 -->
-        <test-method signature="Tc_22()[pri:21, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:11:21 IST" name="Tc_22" finished-at="2024-11-21T17:11:28 IST" duration-ms="6571" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_22 -->
-        <test-method signature="Tc_21()[pri:22, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:11:28 IST" name="Tc_21" finished-at="2024-11-21T17:11:34 IST" duration-ms="6015" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Executive Summary Report Automation Copy] but found []]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Executive Summary Report Automation Copy] but found []
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:629)
-at org.testng.Assert.assertEquals(Assert.java:639)
-at glint.Executivesummaryreport.SaveReport(Executivesummaryreport.java:381)
-at vivaglint.ESR.Tc_21(ESR.java:215)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_21 -->
-        <test-method signature="Tc_24()[pri:23, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:11:34 IST" name="Tc_24" finished-at="2024-11-21T17:11:34 IST" duration-ms="225" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_24 -->
-        <test-method signature="Tc_05()[pri:25, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:11:34 IST" name="Tc_05" finished-at="2024-11-21T17:11:35 IST" duration-ms="595" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_05 -->
-        <test-method signature="Tc_25()[pri:25, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:11:35 IST" name="Tc_25" finished-at="2024-11-21T17:11:42 IST" duration-ms="7916" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_25 -->
-        <test-method is-config="true" signature="Reports()[pri:0, instance:vivaglint.ESR@67f639d3]" started-at="2024-11-21T17:11:42 IST" name="Reports" finished-at="2024-11-21T17:11:43 IST" duration-ms="377" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Reports -->
+        </test-method> <!-- onFinish -->
       </class> <!-- vivaglint.ESR -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

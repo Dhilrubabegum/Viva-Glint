@@ -23,8 +23,6 @@ public class Login<WebDriver> extends Base {
         
         type(driver.findElement(By.id(properties.getProperty("LoginPage.password.id"))),password);
 		driver.findElement(By.xpath(properties.getProperty("LoginPage.submit.xpath"))).click();
-//		Wait<org.openqa.selenium.WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-//	     WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("Report.xpath")));
 		driver.findElement(By.xpath(properties.getProperty("Report.xpath"))).click();
 		}
 	

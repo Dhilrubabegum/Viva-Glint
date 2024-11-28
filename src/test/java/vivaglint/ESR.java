@@ -30,7 +30,7 @@ public class ESR extends Vivalogin {
 	public void Tc_01() throws IOException {
 
 		ExtentTest test = extentReport.createTest("Tc_01");
-		test.log(Status.PASS, "Title: " + esr.ESRTitle());
+	
 		esr.ESRTitle();
 		Assert.assertEquals("Executive Summary Report", esr.ESRTitle());
 		test.addScreenCaptureFromPath(Screenshot("Tc_01"));
@@ -238,7 +238,6 @@ public class ESR extends Vivalogin {
 	@Test(priority = 23)
 	public void Tc_24() throws IOException, InterruptedException {
 		ExtentTest test = extentReport.createTest("Tc_24");
-		test.log(Status.PASS, "Benchmark is showing");
 		esr.Benchmark();
 		test.addScreenCaptureFromPath(Screenshot("Tc_24"));
 
@@ -247,10 +246,46 @@ public class ESR extends Vivalogin {
 	@Test(priority = 25)
 	public void Tc_25() throws IOException, InterruptedException {
 		ExtentTest test = extentReport.createTest("Tc_25");
-		test.log(Status.PASS, "User can able to Remove section");
 		esr.Removesection();
 		test.addScreenCaptureFromPath(Screenshot("Tc_25"));
 
 	}
+	@Test
+	public void Tc_26() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_26");
+		esr.FilterList();
+		test.addScreenCaptureFromPath(Screenshot("Tc_26"));
+	}
 
+	@Test
+	public void Tc_27() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_27");
+		esr.Settings();
+		test.addScreenCaptureFromPath(Screenshot("Tc_27"));
+	}
+	
+	@Test
+	public void Tc_28() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_28");
+		esr.Done();
+		test.addScreenCaptureFromPath(Screenshot("Tc_28"));
+	}
+	@Test
+	public void Tc_29() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_29");
+		esr.RSClose();
+		test.addScreenCaptureFromPath(Screenshot("Tc_29"));
+	}	
+	
+	@Test
+	public void Tc_30() throws IOException, InterruptedException {
+		ExtentTest test = extentReport.createTest("Tc_30");
+		esr.BenchmarkSelection();
+		test.addScreenCaptureFromPath(Screenshot("Tc_30"));
+	}	
+	
+	
+	
 }
+	
+	
